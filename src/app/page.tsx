@@ -440,7 +440,7 @@ export default function Home() {
 
       {/* ── Hero ────────────────────────────────────── */}
       <section
-        className="relative min-h-screen flex items-center overflow-hidden pt-20"
+        className="relative h-screen max-h-screen flex items-center overflow-hidden pt-20"
         style={{ background: "linear-gradient(135deg, #F4F9F7 0%, #EDF5F3 55%, #E8F3F7 100%)" }}
       >
         {/* Decorative blobs */}
@@ -806,29 +806,24 @@ export default function Home() {
             {/* Right — visual card */}
             <div className="relative hidden md:block">
               <div
-                className="relative rounded-3xl overflow-hidden p-10 text-center"
+                className="relative rounded-3xl overflow-hidden p-8"
                 style={{
                   background: "linear-gradient(145deg, rgba(142,207,192,0.08) 0%, rgba(168,200,216,0.08) 100%)",
                   border: "1px solid rgba(142,207,192,0.15)",
                 }}
               >
-                {/* Large tooth icon */}
-                <div className="mx-auto mb-8" style={{ width: "120px", height: "120px" }}>
-                  <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="60" cy="60" r="56" fill="rgba(142,207,192,0.08)" stroke="rgba(142,207,192,0.2)" strokeWidth="1.5" />
-                    <path
-                      d="M60 28c-7.5 0-13.5 2.5-17.5 7-4.5 5-5 11.5-4 18 1 5.5 3 11 4.5 16.5 1.5 6 2.5 12 4 18 .8 3.2 2 5.5 4.5 5.5s3.5-2 4.5-5.5c1-4 1.5-8 2.5-12h3c1 4 1.5 8 2.5 12 1 3.5 2 5.5 4.5 5.5s3.7-2.3 4.5-5.5c1.5-6 2.5-12 4-18 1.5-5.5 3.5-11 4.5-16.5 1-6.5.5-13-4-18-4-4.5-10-7-17.5-7z"
-                      fill="rgba(142,207,192,0.15)"
-                      stroke="#8ECFC0"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                {/* Photos */}
+                <div className="flex gap-3 mb-6">
+                  <div className="relative flex-1 rounded-xl overflow-hidden" style={{ aspectRatio: "1/1", border: "1.5px solid rgba(142,207,192,0.2)" }}>
+                    <Image src="/images/siso1.webp" alt="Cirurgia de siso — caso clínico 1" fill className="object-cover" />
+                  </div>
+                  <div className="relative flex-1 rounded-xl overflow-hidden" style={{ aspectRatio: "1/1", border: "1.5px solid rgba(168,200,216,0.2)" }}>
+                    <Image src="/images/siso2.webp" alt="Cirurgia de siso — caso clínico 2" fill className="object-cover" />
+                  </div>
                 </div>
 
                 {/* Quick FAQ */}
-                <div className="space-y-4 text-left">
+                <div className="space-y-3 text-left">
                   {[
                     { q: "Quando devo extrair o siso?", a: "Quando há dor, infecção recorrente, falta de espaço ou risco de danos aos dentes vizinhos." },
                     { q: "O procedimento dói?", a: "A cirurgia é feita com anestesia local e você não sente dor. Orientamos todo o pós-operatório para máximo conforto." },
