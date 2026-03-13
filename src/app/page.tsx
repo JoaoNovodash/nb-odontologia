@@ -672,6 +672,95 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Sedação ──────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ background: "#F4F9F7" }}>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse at 20% 50%, rgba(142,207,192,0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, rgba(168,200,216,0.1) 0%, transparent 60%)",
+          }}
+        />
+
+        <div className="relative max-w-4xl mx-auto px-6 py-24 md:py-32 text-center">
+          <span
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mx-auto"
+            style={{ background: "rgba(142,207,192,0.15)", color: "#5aab98" }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 20V10" /><path d="M12 20V4" /><path d="M6 20v-6" />
+            </svg>
+            Conforto & Segurança
+          </span>
+
+          <h2
+            className="mt-7"
+            style={{
+              fontFamily: "var(--font-cormorant), 'Cormorant Garamond', serif",
+              fontSize: "clamp(2.6rem, 5vw, 4.8rem)",
+              fontWeight: 600,
+              color: "#2C3E3A",
+              lineHeight: 1.08,
+            }}
+          >
+            Procedimentos com{" "}
+            <em style={{ color: "#6db8a8", fontStyle: "italic" }}>sedação</em>
+          </h2>
+
+          <p
+            className="mt-6 mx-auto leading-relaxed"
+            style={{ fontSize: "1.1rem", color: "#5a706b", maxWidth: "620px" }}
+          >
+            Realizamos cirurgias e procedimentos com sedação endovenosa, para que
+            você durma durante todo o atendimento. Nossa equipe conta com{" "}
+            <strong style={{ color: "#2C3E3A" }}>médicos anestesiologistas</strong>{" "}
+            dedicados, garantindo total segurança e um pós-operatório mais tranquilo.
+          </p>
+
+          {/* Highlights */}
+          <div className="mt-10 flex flex-wrap justify-center gap-5">
+            {[
+              { icon: "moon", label: "Durma durante o procedimento" },
+              { icon: "users", label: "Equipe de anestesiologistas" },
+              { icon: "shield", label: "Monitoramento contínuo" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="flex items-center gap-3 px-5 py-3 rounded-2xl"
+                style={{
+                  background: "white",
+                  border: "1px solid rgba(142,207,192,0.25)",
+                  boxShadow: "0 4px 20px rgba(44,62,58,0.05)",
+                }}
+              >
+                {item.icon === "moon" && (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8ECFC0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                  </svg>
+                )}
+                {item.icon === "users" && (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8ECFC0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                )}
+                {item.icon === "shield" && (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8ECFC0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                )}
+                <span className="text-sm font-medium" style={{ color: "#2C3E3A" }}>{item.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <WhatsAppIcon />
+              Saiba mais sobre sedação
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── Destaque Siso ─────────────────────────────── */}
       <section className="relative overflow-hidden" style={{ background: "#2C3E3A" }}>
         {/* Decorative elements */}
@@ -724,35 +813,6 @@ export default function Home() {
                 Procedimento realizado com técnica minimamente invasiva e
                 acompanhamento pós-operatório completo.
               </p>
-
-              {/* Sedation highlight */}
-              <div
-                className="mt-5 flex items-start gap-3 rounded-2xl px-5 py-4"
-                style={{
-                  background: "linear-gradient(135deg, rgba(142,207,192,0.1) 0%, rgba(168,200,216,0.1) 100%)",
-                  border: "1px solid rgba(142,207,192,0.2)",
-                }}
-              >
-                <div
-                  className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center mt-0.5"
-                  style={{ background: "rgba(142,207,192,0.15)" }}
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8ECFC0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M17.5 5.5C19 7 20.5 9 21 11c-2.5.5-5-.5-7-2.5S10.5 4 11 1.5c2 .5 4 2 5.5 3.5z" />
-                    <path d="M1 21c0 0 4.5-8 13-8" />
-                    <path d="M11 13c0 3.5 2 7 2 7" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold" style={{ color: "#8ECFC0" }}>
-                    Opção de cirurgia com sedação
-                  </p>
-                  <p className="text-xs mt-1 leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
-                    Faça a cirurgia dormindo, com total conforto e segurança. Contamos com equipe de
-                    médicos anestesiologistas para garantir um procedimento tranquilo do início ao fim.
-                  </p>
-                </div>
-              </div>
 
               {/* Benefits */}
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
