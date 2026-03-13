@@ -490,7 +490,7 @@ export default function Home() {
               className="animate-fade-up-delay-2 mt-6 leading-relaxed"
               style={{ fontSize: "1.05rem", color: "#4a6460", maxWidth: "480px" }}
             >
-              Especialistas em implantes, próteses e tratamento de canal, cirurgia odontológica e ortodontia. Cuidado humanizado,
+              Especialistas em implantes, próteses, tratamento de canal, cirurgia odontológica e ortodontia. Cuidado humanizado,
               tecnologia avançada e resultados que transformam vidas — desde a primeira consulta.
             </p>
 
